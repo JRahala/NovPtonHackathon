@@ -25,7 +25,8 @@ const AllPostsScreen = (props) => {
     const dispatch = useDispatch();
     const navigation = useNavigation();
 
-
+    const names = fetch('/members')
+        .then((response) => response.json());
     const loadPosts = useCallback(async () => {
         setError(null);
         setIsRefreshing(true);
@@ -126,7 +127,7 @@ const AllPostsScreen = (props) => {
                     )
                 }}
                 renderItem={(post) => {
-                    console.log("posts - ",post.index);
+                    console.log("posts - ",names);
                     return (
                         <Card post={post.item} userId={loggedUser._id} toggleLikeHandler={toggleLikeHandler} />
                     )

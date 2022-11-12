@@ -7,4 +7,4 @@ app = Flask(__name__)
 def members():
     return {"members": ["Jam", "Tharun", "Shlok", "Devan"]}
 
-app.run(host = "0.0.0.0", port = 5000, debug = True)
+app.run(host = "0.0.0.0", port = 5500, debug = True)

@@ -1,6 +1,6 @@
 {
   "main": "node_modules/expo/AppEntry.js",
-  "proxy": "http:0.0.0.0:5000",
+  "proxy": "http:0.0.0.0:5500",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
