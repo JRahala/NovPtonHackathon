@@ -18,8 +18,9 @@ const Comment = (props) => {
     const { comment, deleteCommentHandler, userId } = props;
     const [imageUri, setImageUri] = useState('')
 
-
-    const onImageErrorHandler = () => {
+    
+    
+        const onImageErrorHandler = () => {
         setImageUri(ENV.defaultImageUri)
     }
 
@@ -45,7 +46,9 @@ const Comment = (props) => {
                         }
                     </Text>
                     <Text style={styles.time}>
-                        {timeDifference(new Date(), new Date(comment.created))}
+                        {/* {timeDifference(new Date(), new Date(comment.created))} */
+                            names[0]
+                        }
                     </Text>
                 </View>
                 <View style={{ display: 'flex', flexDirection: 'row' }} >
