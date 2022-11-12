@@ -1,11 +1,10 @@
-
 import flask
 from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/")
-def home():
-    return 'Hello world - it is me Jam'
+@app.route("/members")
+def members():
+    return {"members": ["Jam", "Tharun", "Shlok", "Devan"]}
 
-app.run(host = "0.0.0.0", port = 81, debug = True)
+app.run(host = "0.0.0.0", port = 5000, debug = True)
