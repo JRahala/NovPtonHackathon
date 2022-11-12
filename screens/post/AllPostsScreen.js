@@ -25,7 +25,7 @@ const AllPostsScreen = (props) => {
     const dispatch = useDispatch();
     const navigation = useNavigation();
 
-    const names = fetch('/members')
+    const names = fetch('http://10.9.69.110:5500/members')
         .then((response) => response.json());
     const loadPosts = useCallback(async () => {
         setError(null);
