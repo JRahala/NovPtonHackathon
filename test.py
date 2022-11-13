@@ -183,13 +183,13 @@ def _like_post():
     return like_post(content["post_title"], content["post_img_base64"])
 
 
-@app.route("/get_post_comments", methods=["POST"])
+@app.route("/get_post_comments", methods=["GET"])
 def _get_post_comments():
     content = request.get_json()
     return get_post_comments(content["post_title"], content["post_img_base64"])
 
 
-@app.route("/retrieve_random_post", method=["POST"])
+@app.route("/retrieve_random_post", methods=["GET"])
 def _retrieve_random_post():
     return retrieve_random_post()
 
